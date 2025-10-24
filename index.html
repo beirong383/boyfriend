@@ -12,7 +12,7 @@
 	<script src="./index_files/9964.js.下載" async="" type="text/javascript"></script>
 	<script async="" src="./index_files/js"></script>
 	<script>
-		var CUTOFF = 861.5;
+		var CUTOFF = 0;
 		var RECORD = 1006;
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -7897,14 +7897,14 @@ console.log("line 7813");
     }
 
 	// Create and append instructions if not already present
-	// if (!instructions && result>CUTOFF) {
+	if (!instructions && result>CUTOFF) {
             instructions = document.createElement("p");
             instructions.innerHTML = "請點以上按鈕將結果複製，然後用Instagram傳送給我。我的Instagram連結在頁面最上方的自我介紹中。";
             instructions.style.fontSize = "16px";
             instructions.style.marginTop = "10px";
             instructions.id = "instructions";  // Give the instructions an ID
             resultContainer.appendChild(instructions);
-        // }
+        }
 
     // Assign the click event to the existing or new button
     copyButton.onclick = function() {
