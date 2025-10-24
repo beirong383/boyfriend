@@ -8133,14 +8133,78 @@ function getSelectedTraits() {
 	
 												</div>
 												<span id="warning_icon_0" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
-												<span id="warning_message_0" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是20到25，請檢查您的輸入是否正確。若確定正確請忽略此警告。請輸入正確年紀。</span>
+												<span id="warning_message_0" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是15到25，請檢查您的輸入是否正確。若確定正確請忽略此警告。請輸入正確年紀。</span>
 
 											</div>
 											<span style="color: red; font-size: 14px; margin-left: 10px;">必填。嚴禁謊報。</span>
 										</div>
 
+										<div class="tool-container container-input container-8 row">
+											<div class="col-xs-12 col-sm-6">
+												<h3>身高 (公分)</h3>
+											</div>
+											<div class="col-xs-6 col-sm-3">
+												<div style="display: flex; align-items: center;">
+													<input type="number" name="age" id="age_input_1" class="tool-input" min="1" max="245" step="1" value="" placeholder="Enter 身高">
+													<span class="points" style="margin-left: 10px;" id="height_points">+0</span>
 
+												</div>
+												<span id="warning_icon_2" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
+												<span id="warning_message_2" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是152到192，請檢查您的輸入是否正確。若確定正確請忽略此警告。</span>
 
+											</div>
+										</div>
+
+<div class="tool-container container-input container-8 row">
+											<div class="col-xs-12 col-sm-6">
+												<h3>體重 (公斤)</h3>
+											</div>
+											<div class="col-xs-6 col-sm-3">
+												<div style="display: flex; align-items: center;">
+													<input type="number" name="age" id="age_input_3" class="tool-input" min="1" max="245" step="1" value="100" placeholder="Enter IQ">
+													<span class="points" style="margin-left: 10px;" id="IQpoints">+0</span>
+
+												</div>
+												<span id="warning_icon_1" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
+												<span id="warning_message_1" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是40到145，請檢查您的輸入是否正確。若確定正確請忽略此警告。</span>
+
+											</div>
+										</div>
+
+<div class="tool-container container-input container-8 row">
+											<div class="col-xs-12 col-sm-6">
+												<h3>體脂 (%)</h3>
+											</div>
+											<div class="col-xs-6 col-sm-3">
+												<div style="display: flex; align-items: center;">
+													<input type="number" name="age" id="age_input_3" class="tool-input" min="1" max="245" step="1" value="100" placeholder="Enter IQ">
+													<span class="points" style="margin-left: 10px;" id="IQpoints">+0</span>
+
+												</div>
+												<span id="warning_icon_1" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
+												<span id="warning_message_1" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是5到35，請檢查您的輸入是否正確。若確定正確請忽略此警告。</span>
+
+											</div>
+										</div>
+
+										<div class="tool-container container-input container-8 row">
+  <div class="col-xs-12 col-sm-6">
+    <h3>MBTI</h3>
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <div style="display: flex; align-items: center;">
+      <input type="text" name="mbti" id="mbti_input" class="tool-input"
+             maxlength="4" pattern="[IEie][NSns][TFtf][JPjp]"
+             placeholder="例如 INTJ 或 ESFP">
+      <span class="points" style="margin-left: 10px;" id="MBTIpoints">+0</span>
+    </div>
+
+    <span id="warning_icon_mbti" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
+    <span id="warning_message_mbti" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">
+      這個值通常是4個字母，[I/E][N/S][T/F][J/P]，請檢查您的輸入是否正確。若確定正確請忽略此警告。
+    </span>
+  </div>
+</div>
 
 										
 
@@ -9925,7 +9989,7 @@ function getSelectedTraits() {
 	</div>
 
 	<script>
-		document.getElementById('age_input_0').addEventListener('change', function() {
+		/* document.getElementById('age_input_0').addEventListener('change', function() {
     const ageValue = this.value;
 	const warningMessage = document.getElementById('warning_message_0');
 	const warningIcon = document.getElementById('warning_icon_0');
@@ -10012,7 +10076,7 @@ function getSelectedTraits() {
                 console.log("IQcalculatedValue = " + IQcalculatedValue);
 			} */
 
-            pointsElement.textContent = '+' + IQcalculatedValue;
+            /* pointsElement.textContent = '+' + IQcalculatedValue;
 
             $('.tool-input.hidden-checkbox_1').val(IQcalculatedValue);
 
@@ -10020,6 +10084,8 @@ function getSelectedTraits() {
 
 
         });
+
+		
 
         
             // Create a hidden container div to isolate the input
@@ -10074,7 +10140,7 @@ function getSelectedTraits() {
                 height_calculatedValue = (heightValue - 160) * 6;
             } */
 
-            pointsElement.textContent = '+' + height_calculatedValue;
+            /* pointsElement.textContent = '+' + height_calculatedValue;
 
             // Check if the hidden input already exists
             if ($('.tool-input.hidden-checkbox_2').length === 0) {
@@ -10116,7 +10182,176 @@ function getSelectedTraits() {
             console.log($(".tool-input:checked").length);
 
             
-        });
+        }); */
+
+
+    // 年齡
+    const ageInput = document.getElementById('age_input_0');
+    ageInput.addEventListener('change', function () {
+        const ageValue = this.value;
+        const warningMessage = document.getElementById('warning_message_0');
+        const warningIcon = document.getElementById('warning_icon_0');
+        const pointsElement = this.closest('.tool-container').querySelector('.points');
+
+        if (ageValue >= 15 && ageValue <= 25) {
+            warningMessage.style.display = 'none';
+            warningIcon.style.display = 'none';
+        } else {
+            warningMessage.style.display = 'inline';
+            warningIcon.style.display = 'inline';
+        }
+
+        let calculatedValue = 0; // 可以自訂計算公式
+        pointsElement.textContent = '+' + calculatedValue;
+
+        // hidden checkbox
+        let hiddenInput = document.querySelector('.tool-input.hidden-checkbox_0');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'checkbox';
+            hiddenInput.className = 'tool-input hidden-checkbox_0';
+            hiddenInput.checked = true;
+            hiddenInput.value = calculatedValue;
+            hiddenInput.style.display = 'none';
+            document.body.appendChild(hiddenInput);
+        } else {
+            hiddenInput.value = calculatedValue;
+        }
+    });
+
+    // 身高
+    const heightInput = document.getElementById('age_input_1');
+    heightInput.addEventListener('change', function () {
+        const heightValue = this.value;
+        const warningMessage = document.getElementById('warning_message_2');
+        const warningIcon = document.getElementById('warning_icon_2');
+        const pointsElement = document.getElementById('height_points');
+
+        if (heightValue >= 152 && heightValue <= 192) {
+            warningMessage.style.display = 'none';
+            warningIcon.style.display = 'none';
+        } else {
+            warningMessage.style.display = 'inline';
+            warningIcon.style.display = 'inline';
+        }
+
+        let calculatedValue = 0; // 可自訂計算公式
+        pointsElement.textContent = '+' + calculatedValue;
+
+        let hiddenInput = document.querySelector('.tool-input.hidden-checkbox_2');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'checkbox';
+            hiddenInput.className = 'tool-input hidden-checkbox_2';
+            hiddenInput.checked = true;
+            hiddenInput.value = calculatedValue;
+            hiddenInput.style.display = 'none';
+            document.body.appendChild(hiddenInput);
+        } else {
+            hiddenInput.value = calculatedValue;
+        }
+    });
+
+    // 體重
+    const weightInput = document.getElementById('age_input_2');
+    weightInput.addEventListener('change', function () {
+        const weightValue = this.value;
+        const warningMessage = document.getElementById('warning_message_1');
+        const warningIcon = document.getElementById('warning_icon_1');
+        const pointsElement = document.getElementById('IQpoints');
+
+        if (weightValue >= 40 && weightValue <= 145) {
+            warningMessage.style.display = 'none';
+            warningIcon.style.display = 'none';
+        } else {
+            warningMessage.style.display = 'inline';
+            warningIcon.style.display = 'inline';
+        }
+
+        let calculatedValue = 0; // 可自訂計算公式
+        pointsElement.textContent = '+' + calculatedValue;
+
+        let hiddenInput = document.querySelector('.tool-input.hidden-checkbox_1');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'checkbox';
+            hiddenInput.className = 'tool-input hidden-checkbox_1';
+            hiddenInput.checked = true;
+            hiddenInput.value = calculatedValue;
+            hiddenInput.style.display = 'none';
+            document.body.appendChild(hiddenInput);
+        } else {
+            hiddenInput.value = calculatedValue;
+        }
+    });
+
+    // 體脂
+    const fatInput = document.getElementById('age_input_3');
+    fatInput.addEventListener('change', function () {
+        const fatValue = this.value;
+        const warningMessage = document.getElementById('warning_message_1');
+        const warningIcon = document.getElementById('warning_icon_1');
+        const pointsElement = document.getElementById('IQpoints');
+
+        if (fatValue >= 5 && fatValue <= 35) {
+            warningMessage.style.display = 'none';
+            warningIcon.style.display = 'none';
+        } else {
+            warningMessage.style.display = 'inline';
+            warningIcon.style.display = 'inline';
+        }
+
+        let calculatedValue = 0;
+        pointsElement.textContent = '+' + calculatedValue;
+
+        let hiddenInput = document.querySelector('.tool-input.hidden-checkbox_3');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'checkbox';
+            hiddenInput.className = 'tool-input hidden-checkbox_3';
+            hiddenInput.checked = true;
+            hiddenInput.value = calculatedValue;
+            hiddenInput.style.display = 'none';
+            document.body.appendChild(hiddenInput);
+        } else {
+            hiddenInput.value = calculatedValue;
+        }
+    });
+
+    // MBTI
+    const mbtiInput = document.getElementById('mbti_input');
+    mbtiInput.addEventListener('change', function () {
+        const mbtiValue = this.value.toUpperCase();
+        const warningMessage = document.getElementById('warning_message_mbti');
+        const warningIcon = document.getElementById('warning_icon_mbti');
+        const pointsElement = document.getElementById('MBTIpoints');
+
+        const mbtiPattern = /^[IE][NS][TF][JP]$/;
+        if (mbtiPattern.test(mbtiValue)) {
+            warningMessage.style.display = 'none';
+            warningIcon.style.display = 'none';
+        } else {
+            warningMessage.style.display = 'inline';
+            warningIcon.style.display = 'inline';
+        }
+
+        let calculatedValue = 0; // 可自訂分數
+        pointsElement.textContent = '+' + calculatedValue;
+
+        let hiddenInput = document.querySelector('.tool-input.hidden-checkbox_mbti');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'checkbox';
+            hiddenInput.className = 'tool-input hidden-checkbox_mbti';
+            hiddenInput.checked = true;
+            hiddenInput.value = calculatedValue;
+            hiddenInput.style.display = 'none';
+            document.body.appendChild(hiddenInput);
+        } else {
+            hiddenInput.value = calculatedValue;
+        }
+    });
+
 
 $(".tool-crcl .tool-input").keyup(function() {
    if($(this).val()!="") {
