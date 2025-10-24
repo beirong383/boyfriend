@@ -8183,8 +8183,8 @@ function getSelectedTraits() {
 													<span class="points" style="margin-left: 10px;" id="IQpoints">+0</span>
 
 												</div>
-												<span id="warning_icon_1" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
-												<span id="warning_message_1" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是5到35，請檢查您的輸入是否正確。若確定正確請忽略此警告。</span>
+												<span id="warning_icon_3" style="display:none; color: red; font-size: 20px; margin-left: 10px;">&#9888;</span>
+												<span id="warning_message_3" class="warning-message" style="display:none; color: red; font-size: 12px; margin-left: 10px;">這個數值通常是5到35，請檢查您的輸入是否正確。若確定正確請忽略此警告。</span>
 
 											</div>
 										</div>
@@ -10291,8 +10291,8 @@ function getSelectedTraits() {
     const fatInput = document.getElementById('age_input_3');
     fatInput.addEventListener('change', function () {
         const fatValue = this.value;
-        const warningMessage = document.getElementById('warning_message_1');
-        const warningIcon = document.getElementById('warning_icon_1');
+        const warningMessage = document.getElementById('warning_message_3');
+        const warningIcon = document.getElementById('warning_icon_3');
         const pointsElement = document.getElementById('IQpoints');
 
         if (fatValue >= 5 && fatValue <= 35) {
