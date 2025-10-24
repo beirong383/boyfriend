@@ -7856,12 +7856,12 @@ console.log("line 7813");
 												$(".tool-input:checked").each(function () {
 													result += 1 * $(this).val();
 												});
-												/* if (!isNaN(result)) {
+												if (!isNaN(result)) {
 													console.log("$(\".tool-input\").length = " + $(".tool-input").length);
 													console.log("$(\".tool-input:checked\").length = " + $(".tool-input:checked").length);
 													console.log("$(\".tool-container\").length = " + $(".tool-container").length);
 													if ($(".tool-input:checked").length == $(".tool-container").length - 1) {
-														if (result >= 0 && result <= CUTOFF) {
+														/* if (result >= 0 && result <= CUTOFF) {
 															$(".tool-result-interpretation .class").text("妳距離我的理想型差了" + (CUTOFF-result) + "分。");
 														} else if (result >= CUTOFF && result <= RECORD) {
 															$(".tool-result-interpretation .class").text("妳是我的理想型！");
@@ -7950,7 +7950,7 @@ function getSelectedTraits() {
 	selectedTraits.push("體重" + document.getElementById("age_input_2").value + "kg");
 	selectedTraits.push("身高" + document.getElementById("age_input_1").value + "cm");
 	selectedTraits.push("體脂" + document.getElementById("age_input_3").value + "%");
-	selectedTraits.push("MBTI" + document.getElementById("age_input_4").value);
+	selectedTraits.push("MBTI " + document.getElementById("age_input_4").value);
 
     return selectedTraits;
 }
